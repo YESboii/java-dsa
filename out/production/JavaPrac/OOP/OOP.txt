@@ -1,0 +1,43 @@
+in case of primitives we cannot swap
+func(int a, int b){
+    int temp = a;
+    a = b;
+    b= temp;
+}
+->value wont be swapped since it is passed by value;
+-->NOTE: Even if we use Wrapper class we still can't swap them
+--> Why?? Simple cuz in java we only pass by value
+main(){
+Integer n1 = 2,n2 = 3;
+}
+func(Integer a, Integer b){
+    Integer temp = a;
+    a = b;
+    b= temp;
+}
+--> What we have is n1 pointing to some object and n2 pointing to some object
+--> when we pass it in the function, a will point to the same n1 object and b-> n2
+--> when we perform the swap what actually happens is locally we our a and b reference variables are re assigned, but our n1 and n2 point to the same
+object
+--> if we make changes via a and b to the objects it will reflect in the object as they point to the same object..More evident in case of arraylist;
+
+================================================================================================================================================================
+Static:
+Here are some characteristics of the static keyword in Java:
+
+->Shared memory allocation: Static variables and methods are allocated memory space only once during the execution of the program.
+This memory space is shared among all instances of the class, which makes static members useful for maintaining global state or shared functionality1.
+
+->Accessible without object instantiation: Static members can be accessed without the need to create an instance of the class.
+This makes them useful for providing utility functions and constants that can be used across the entire program1.
+
+->Associated with class, not objects: Static members are associated with the class, not with individual objects.
+This means that changes to a static member are reflected in all instances of the class,
+and that you can access static members using the class name rather than an object reference1.
+
+->Cannot access non-static members: Static methods and variables cannot access non-static members of a class,
+as they are not associated with any particular instance of the class1.
+
+->Can be overloaded, but not overridden: Static methods can be overloaded,
+ which means that you can define multiple methods with the same name but different parameters.
+  However, they cannot be overridden, as they are associated with the class rather than with a particular instance of the class1.
