@@ -1,4 +1,4 @@
-package Stack.k;
+package Queue;
 
 public class Queue {
     private int capacity;
