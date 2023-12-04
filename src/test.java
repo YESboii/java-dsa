@@ -1,7 +1,13 @@
 
 import java.util.*;
-import LinkedList.*;
+import Stack.*;
 
+class Test<T extends Integer>{
+
+    void add(T n1,T n2){
+        System.out.println(n1+" "+n2);
+    }
+}
 public class test{
     public static List<List<Integer>> helper(int []nums,int i,List<List<Integer>> list,List<Integer>subset){
         if(i==nums.length){
@@ -61,18 +67,25 @@ public class test{
 //        System.out.println(cuts);
         return cuts >= k + 1;
     }
+
     public static void main(String[] args) {
 //        Test t = new Test();
 //        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5, 6, 7, 8, 9, 10, 11, 12, 13 ));
 //        System.out.println(getMaximumSweetness(list,3));
-        List<Integer> list = new ArrayList<>();
-        for(int i=1;i<=12;i++){
-            int sqrt = (int)Math.sqrt(i);
-            if(sqrt*sqrt==i){
-                list.add(i);
-            }
-        }
-        System.out.println(list);
+//        List<Integer> list = new ArrayList<>();
+//        for(int i=1;i<=12;i++){
+//            int sqrt = (int)Math.sqrt(i);
+//            if(sqrt*sqrt==i){
+//                list.add(i);
+//            }
+//        }
+//        System.out.println(list);
+//        Integer a = 12;
+//        Integer b =10;
+//        System.out.println(a>b);
+//        Test<Integer> test = new Test<>();
+        Stackk<Integer> stackk = new Stackk<Integer>(); // Correct: Instantiate a Stackk<Integer>
+
 
 
     }

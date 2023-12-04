@@ -51,23 +51,29 @@ public class RotatedSortedArray {
 static int search(int []arr,int target){
     int start = 0,end = arr.length-1;
     while(start<=end){
-        int mid = start + (end -start)/2;
-        boolean condition1 = arr[mid]<arr[start] && target<=arr[start] && target > arr[mid];
-        boolean condition2 = arr[mid]>arr[start] && target>=arr[start] && target<arr[mid];
-        boolean condition3 = target > arr[end];
-        if(arr[mid]==target){
-            return mid;
-        }
-        else if( (condition1 || condition2) && condition3 ){
-            end = mid -1;
+        int mid = start + (end - start)/2;
+        if(arr[mid]==target) return mid;
+
+        if(arr[start]<=arr[mid]){
+            if(arr[start]<=target && target<arr[mid]){
+                end = mid-1;
+            }
+            else{
+                start = mid + 1;
+            }
         }
         else{
-            start = mid+1;
+            if(arr[mid]<target && target<=arr[end]){
+                start = mid +1;
+            }
+            else{
+                end = mid -1;
+            }
         }
     }
     return -1;
 }
     public static void main(String[] args) {
-        System.out.println(search(new int[]{5,1,3},3));
+        System.out.println(search(new int[]{3,1,2},3));
     }
 }
