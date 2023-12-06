@@ -54,6 +54,7 @@ class Digit{
 //        return 1;
 //    }
 }
+
 class Num<T>{
 //    private final T value;
 //    Num(T n){
@@ -70,4 +71,6 @@ class Num<T>{
 class LivingThing{
 }
 class Animal extends LivingThing{}
-class Demot<T extends LivingThing>{}
+class Demot<T extends LivingThing>{
+    List<Integer> list = new ArrayList<>();
+}

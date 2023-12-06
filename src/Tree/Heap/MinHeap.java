@@ -72,11 +72,11 @@ public class MinHeap {
 }
 class Demo{
     public static void main(String[] args) {
-        int []arr = {5,3,1,4,6};
+        int []arr = {70, 42, 35, 8, 12, 15, 23, 6, 90};
         MinHeap heap = new MinHeap(arr);
         heap.buildHeap();
 //        heap.add(0);
-        heap.heapSort();
+//        heap.heapSort();
         heap.print();
     }
 }

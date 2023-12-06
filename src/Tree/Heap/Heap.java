@@ -47,7 +47,7 @@ public class Heap {
         }
     }
     public void print(){
-        for (int i = 0;i<size&&list[i]!=0;i++
+        for (int i = 0;i<size;i++
              ) {
             System.out.print(list[i]+" ");
         }
@@ -83,14 +83,11 @@ class Test{
 //        https://www.geeksforgeeks.org/time-complexity-of-building-a-heap/
         //Time complexity looks O(n * log(n)) buts its O(n).
         int []arr = {5,3,1,4,6};   //after creating the heap, the array will be in the order of the level order traversal of the heap tree.
-        Heap heap = new Heap();
-        heap.add(6);
-        heap.add(3);
-        heap.add(4);
-        heap.add(1);
-        heap.add(5);
+        Heap heap = new Heap(arr);
+
 
         heap.buildHeap();//{6, 5, 1, 4, 3 }
+        heap.heapSort();
         heap.print();
 //        heap.print();
 //        /*
