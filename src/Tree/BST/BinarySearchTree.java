@@ -151,7 +151,7 @@ public class BinarySearchTree {
         return height(root);
     }
     private int height(TreeNode root){
-        if(root==null) return 0;
+        if(root==null) return -1;
         int left = height(root.left);
         int right = height(root.right);
 
@@ -161,15 +161,16 @@ public class BinarySearchTree {
 class Test{
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
-        bst.insert(5);
         bst.insert(4);
-        bst.insert(10);
-        bst.insert(1);
         bst.insert(2);
-        bst.insert(8);
-        bst.insert(9);
-        bst.insert(17);
-        bst.insert(20);
+        bst.insert(6);
+        bst.insert(1);
+        bst.insert(3);
+        bst.insert(7);
+//        bst.insert(8);
+//        bst.insert(9);
+//        bst.insert(17);
+//        bst.insert(20);
 
 //        bst.inOrderTraversal();
         System.out.println(bst.size());
@@ -200,3 +201,8 @@ class Test{
 //        bst.inOrderTraversal();
     }
 }
+/*
+              4
+             /
+            5
+ */
