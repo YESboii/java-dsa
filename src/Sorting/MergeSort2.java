@@ -26,14 +26,13 @@ mergeSort(arr,0,arr.length-1);
             if(arr[i]<=arr[j]){
                 res[k] = arr[i];
                 i++;
-                k++;
             }
             else{
                     res[k] = arr[j];
                     j++;
-                    k++;
-                }
             }
+            k++;
+        }
         while(i<=end1){
             res[k] = arr[i];
             i++;

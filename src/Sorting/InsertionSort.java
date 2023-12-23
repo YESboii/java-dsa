@@ -2,8 +2,8 @@ package Sorting;
 
 import java.util.Arrays;
 // Worst case & avg: O(n^2)
-//Best case: O(n)
-//better than selection and bubble
+//Best case: O(n) if already sorted
+//better than average performance selection and bubble & stable as-well
 public class InsertionSort {
     static void insertionSort(int []arr,int n){
         for(int i=1;i<n;i++){

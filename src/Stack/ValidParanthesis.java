@@ -1,4 +1,4 @@
-package MiscQuestions;
+package Stack;
 
 import java.util.Stack;
 
