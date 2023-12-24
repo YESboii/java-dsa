@@ -1,5 +1,17 @@
 package Queue;
+/*
+-The ArrayDeque class is the resizable array implementation of the Deque interface and LinkedList class is the list implementation
 
+-NULL elements can be added to LinkedList but not in ArrayDeque
+
+-ArrayDeque is more efficient than the LinkedList for add and remove operation at both ends
+and LinkedList implementation is efficient for removing the current element during the iteration
+
+-The LinkedList implementation consumes more memory than the ArrayDeque
+
+-ArrayDeque is generally faster than Stack and LinkedList when used as a stack or queue since it not synchronised unlike a vector,
+more memory efficient than a linked-list
+ */
 
 
 public class CustomQueue {
